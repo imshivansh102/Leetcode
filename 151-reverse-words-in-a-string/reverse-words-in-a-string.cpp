@@ -2,18 +2,18 @@ class Solution {
 public:
     string reverseWords(string s) {
 
-        stringstream ss(s); // it reads until space
-        string token = "";
-        string result = "";
+        stringstream ss(s);   // it reads until space.
+        string word = "";
+        string answer = "";
 
-        while ( ss >> token ){ // providing input to token.
+        while ( ss >> word ) {  //providing input to word.
 
-            result = token + " " + result;
+            answer = word + " " + answer;
 
         }
-        result=result.substr(0,result.length()-1); // removing empty space of last position.
+        answer = answer.substr( 0, answer.length() - 1 ); //removing last extra space
 
-        return result;
+        return answer;
         
     }
 };
