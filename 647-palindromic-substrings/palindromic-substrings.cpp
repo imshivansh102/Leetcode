@@ -18,8 +18,8 @@ public:
         
     }
 
-    int countSubstrings(string text) {
-        int n = text.length();
+    int countSubstrings(string s) {
+        int n = s.length();
         int total = 0;
         
         for (int i = 0; i<n; i++) {  
@@ -28,7 +28,7 @@ public:
 
             for (int j = i; j < n; j++) {
 
-                current += text[j];
+                current += s[j];
 
                 if ( isPalindrome(current) ) {
                     total++;
