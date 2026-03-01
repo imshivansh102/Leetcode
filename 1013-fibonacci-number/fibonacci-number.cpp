@@ -1,0 +1,23 @@
+class Solution {
+public:
+
+    int fibonacci(int n){
+
+        if(n==0){
+            return 0;
+        }
+        if(n==1){
+            return 1;
+        }
+        // Recursive relation.
+        int ans = fibonacci(n-1) + fibonacci(n-2);
+        return ans;
+
+    }
+
+    int fib(int n) {
+
+        return fibonacci(n);
+        
+    }
+};
