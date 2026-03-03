@@ -33,7 +33,7 @@ public:
         // recursive call.
         int op1 = diameterOfBinaryTree(root->left);
         int op2 = diameterOfBinaryTree(root->right);
-        int op3 = height(root->left) + height(root->right);
+        int op3 = height(root->left) + height(root->right);// it is a formula of diameter in edges.
 
         int ans = max(op1, max(op2,op3));
         return ans;
