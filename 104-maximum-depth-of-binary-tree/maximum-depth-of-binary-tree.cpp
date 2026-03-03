@@ -16,12 +16,7 @@ public:
         if ( root == NULL ){ // Base condition.
             return 0;
         }
-        if ( root->left == NULL ){ // When tree is right skewed.
-            return 1 + maxDepth(root->right);
-        }
-        if ( root->right == NULL ){ // When tree is left skewed.
-            return 1 + maxDepth(root->left); 
-        }
+        
         // Recursive call.
         int left = maxDepth(root->left);
         int right = maxDepth(root->right);
