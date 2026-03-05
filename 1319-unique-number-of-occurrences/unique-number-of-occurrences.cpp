@@ -1,17 +1,23 @@
 class Solution {
 public:
     bool uniqueOccurrences(vector<int>& arr) {
-        vector<int> vec(2001, 0);
+        unordered_map<int, int> mp;
 
-        for(int &x : arr) { // frequency count for all elements of arr.
-            vec[x + 1000]++;
+        // count frequency of each number.
+        for(int &x : arr) {
+            mp[x]++;
         }
 
-        sort(begin(vec), end(vec));
+        unordered_set<int> st;
 
-        for(int i = 1; i < 2001; i++) {
-            if(vec[i] != 0 && vec[i] == vec[i-1])
+        for(auto &it : mp) { // store all values of mp in set.
+            int freq = it.second; // it.first = number
+
+            if(st.find(freq) != st.end()){
                 return false;
+            }
+        
+            st.insert(freq);
         }
 
         return true;
