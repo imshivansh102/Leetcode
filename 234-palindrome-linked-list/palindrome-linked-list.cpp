@@ -14,10 +14,10 @@ public:
     ListNode* reverse(ListNode* head) { // finding reverse of Linked List.
         ListNode* prev = NULL;
         ListNode* curr = head;
-        ListNode* forward = curr->next;
+        
 
         while(curr != NULL) {
-            forward = curr->next;
+            ListNode* forward = curr->next;
             curr->next = prev;
             prev = curr;
             curr = forward; 
