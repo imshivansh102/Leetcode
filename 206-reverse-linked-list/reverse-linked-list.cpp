@@ -19,7 +19,7 @@ public:
         ListNode* temp = curr->next;
         curr->next = prev;
         // Recursive call.
-        return reverseLL(curr, temp);
+        return reverseLL(curr, temp);// position change shown in function recursive call
 
     }
 
