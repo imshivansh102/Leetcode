@@ -5,7 +5,7 @@ public:
 
         for(int i = 0; i < s.length(); i++) {
             char ch = s[i];
-
+            // using empty function is easy otherwise it gives runtime error.
             if(!result.empty() && 
                (result.back() + 32 == ch || 
                 result.back() - 32 == ch)) {
